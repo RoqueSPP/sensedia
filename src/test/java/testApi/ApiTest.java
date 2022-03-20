@@ -28,7 +28,7 @@ public class ApiTest {
 	int status = 200;
 
 	@Test
-	public void CriarBoard() {
+	public void criarBoard() {
 
 		HttpResponse<String> response;
 		try {
@@ -49,7 +49,7 @@ public class ApiTest {
 	}
 
 	@Test
-	public void CriarList() {
+	public void criarList() {
 		HttpResponse<String> response;
 		try {
 			response = Unirest.post("https://api.trello.com/1/lists")
@@ -87,7 +87,7 @@ public class ApiTest {
 	}
 
 	@Test
-	public void CardUpdate() {
+	public void cardUpdate() {
 		HttpResponse<JsonNode> response;
 		try {
 			response = Unirest.put("https://api.trello.com/1/cards/"+idcard)
@@ -108,7 +108,7 @@ public class ApiTest {
 		}
 	}
 	@Test
-	public void DeliteBoard() {
+	public void deliteBoard() {
 	HttpResponse<String> response;
 	try {
 		response = Unirest.delete("https://api.trello.com/1/boards/"+idboard)
